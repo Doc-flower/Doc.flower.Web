@@ -84,7 +84,9 @@
 </head>
 <body>
     <section>
-        <div class="container animated bounceInDown">
+        <img src="../img/logo_Dr.Flower.png" class="logo_drFlower left" height="106" width="260"/>
+        <br>
+        <div class="container animated bounceInDown left" >
             <div class="user signinBx">
                 <div class="imgBx">
                     <img src="../img/wallhaven-x1gr8z_1920x1080.png" height="1080" width="1920"/></div>
@@ -107,9 +109,9 @@
                         <h1>创建账户</h1>
                         <input type="hidden" id="type" name="type" value="add">
 
-                        <input type="text" id="customername" name="customername" placeholder="用户名，大小写字母、数字、_、-，6-20位" onblur="checkName()">
+                        <input type="text" id="customername" name="customername" placeholder="用户名，6-20位" onblur="checkName()">
                         <input type="text" id="customertel" name="customertel" placeholder="电话号码" onblur="checkTel()">
-                        <input type="text" id="customeremail" name="customeremail" placeholder="邮箱地址，如123456789@163.com" onblur="checkMail()">
+                        <input type="text" id="customeremail" name="customeremail" placeholder="邮箱地址" onblur="checkMail()">
                         <input type="password" id="customerpwd" name="customerpwd" placeholder="密码，6-20位" onblur="checkPwd()">
                         <input type="password" id="customercfmpwd" name="customercfmpwd" placeholder="确认密码" onblur="checkcfmpwd()">
                         <input type="button" value="注 册" onclick="check()">
