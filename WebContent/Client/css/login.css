@@ -78,13 +78,14 @@ a {text-decoration: none;}
     width: 950px;
     top:-80px;
     left: -116px;
+    background: #000;
 }
 
 .cont_img_back_grey > img {
     width: 100%;
     -webkit-filter: grayscale(80%);
     filter: grayscale(60%);
-    opacity: 0.4;
+    opacity: 0.6;
     animation-name: animar_fondo;
     animation-duration: 20s;
     animation-timing-function: linear;
@@ -97,16 +98,20 @@ a {text-decoration: none;}
     width: 950px;
     top:-80px;
     left: -116px;
+    background: #000;
+
 }
 
 .cont_img_back_ > img {
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.6;
     animation-name: animar_fondo;
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-radius: 10px;
+
 }
 
 .cont_forms_active_login > .cont_img_back_ {
@@ -135,6 +140,8 @@ a {text-decoration: none;}
     height: 280px;
     top: 100px;
     z-index: 1;
+    border-radius: 10px;
+
 }
 
 .col_md_login {
