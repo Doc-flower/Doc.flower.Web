@@ -8,8 +8,25 @@ a,a:hover{
 ul,ol{
     list-style-type: none;
 }
-nav{
+nav{}
+
+
+.sale_hover{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    z-index: 1;
+    border: 1px #000 solid;
+    /*display: ;*/
 }
+.sale_hover a{
+    display: inline-block;
+    font-size: 18px !important;
+    width: 100%;
+    height: 30px !important;
+}
+
+
 /* 别看啦
 要我陪你吗
 mua~
@@ -127,7 +144,7 @@ mua~
     width: 100%;
     height: 1000px;
     /* background-color: rgb(218, 31, 31); */
-    border: black 2px solid;
+    /*border: black 2px solid;*/
     margin-top: 20px;
 }
 
@@ -166,4 +183,9 @@ mua~
 .nav_main_title ul li .title_active{
     background: rgb(29, 93, 189);
     color: #fff;
+}
+.sale_title{
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: #d4237a 5px solid;
 }
