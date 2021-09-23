@@ -263,6 +263,8 @@ body{
 }
 .card-icon{
     border-radius: 10px;
-
     height: 85px;
+}
+.main_icon_img{
+    margin: 30px auto;
 }
