@@ -6,30 +6,25 @@
     <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../public/css/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../css/shops.css">
+
+    <link rel="stylesheet" href="../../public/css/animate.min.css">
     <style>
         #active{
             color: #1296db;
             background: #fff;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
         }
-        #header {
-            background-color: #1296db;
-            width: 1500px;
-            color:white;
-            text-align:center;
-            padding:15px;
-
-        }
-        #section {
-            width: 1400px;
-            float: left;
-            padding: 10px;
-        }
         td{
             margin: auto auto;
         }
+        body{
+            background: #E4E9F7;
+
+        }
+
     </style>
+    <script src="../../public/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 <div class="sidebar shadow">
@@ -42,42 +37,42 @@
     </div>
     <ul class="nav_list">
         <li class="active">
-            <a href="#" id="active" class="shadow">
+            <a href="index.html" >
                 <i class='fa fa-home fa-3x' ></i>
                 <span class="links_name">首页</span>
             </a>
             <span class="tooltip">首页</span>
         </li>
         <li>
-            <a href="#">
+            <a href="Orders.html">
                 <i class='fa fa-list-alt' ></i>
                 <span class="links_name">订单管理</span>
             </a>
             <span class="tooltip">订单管理</span>
         </li>
         <li>
-            <a href="#">
+            <a href="Users.html">
                 <i class='fa fa-users' ></i>
                 <span class="links_name">用户管理</span>
             </a>
             <span class="tooltip">用户管理</span>
         </li>
         <li>
-            <a href="#">
+            <a href="Flowers.html">
                 <i class='fa fa-database' ></i>
                 <span class="links_name">花库管理</span>
             </a>
             <span class="tooltip">花库管理</span>
         </li>
         <li>
-            <a href="#">
+            <a href="#" id="active" class="shadow">
                 <i class='fa fa-vcard' ></i>
                 <span class="links_name">店家管理</span>
             </a>
             <span class="tooltip">店家管理</span>
         </li>
         <li>
-            <a href="#">
+            <a href="Blogs.html">
                 <i class='fa fa-book' ></i>
                 <span class="links_name">文章管理</span>
             </a>
@@ -100,191 +95,217 @@
 
 
     <!--入驻花博士店家信息-->
-<div class="home_content" style="position: static">
-    <div class="header" id="header">
-        <h5>花博士期待你的加入</h5>
-    </div>
-    <div class="section" id="section">
-
-        <div class="main" id="main">
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                <div class=" d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">店家管理</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="input-group mr-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">搜索成员</span>
-                            </div>
-                            <input type="text" id="playname_search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onkeypress="search()">
+<div class="home_content">
+    <div class="row mx-1">
+        <div class="col-md-12">
+            <!--添加影厅_模态框-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">新店加盟</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="btn-group mr-2">
-                            <button id="add" type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#exampleModal">新店加盟</button>   <!--模态框-->
-                        </div>
-                    </div>
-                </div>
-                    <!--添加影厅_模态框-->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" >
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">新店加盟</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="myform" method="post" action="#">
-                                        <input type="hidden" id="type" name="type" value="add">
+                        <div class="modal-body col-md-12">
+                            <form id="myform" method="post" action="#">
+                                <input type="hidden" id="type" name="type" value="add">
 
-                                        <div class="input-group form-group col-lg-4 float-left">
-                                            <div class="input-group-prepend">
-                                                <label class="input-group-text">店铺编号</label>
-                                            </div>
-                                            <input type="text" class="form-control" disabled="disabled" id="playid" name="playid">
-                                        </div>
-
-                                        <div class="input-group form-group col-lg-8 float-left">
-                                            <div class="input-group-prepend">
-                                                <label class="input-group-text" >经理姓名</label>
-                                            </div>
-                                            <input type="text" class="form-control" id="playname" name="playname">
-                                        </div>
-                                        <div class="input-group form-group col-lg-4 float-left">
-                                            <div class="input-group-prepend">
-                                                <label class="input-group-text">联系方式</label>
-                                            </div>
-                                            <input type="text" class="form-control" id="kind" name="colcount">
-
-                                        </div>
-                                        <div class="input-group form-group col-lg-4 float-left">
-                                            <div class="input-group-prepend">
-                                                <label class="input-group-text">店铺地址</label>
-                                            </div>
-                                            <input type="text" class="form-control" id="ticketprice" name="ticketprice">
-
-                                        </div>
-
-                                        <div class="input-group form-group col-lg-4 mb-3">
-                                            <div class="input-group-prepend">
-                                                <label class="input-group-text">加盟方式</label>
-                                            </div>
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                                <option selected>请选择</option>
-                                                <option value="1">全款</option>
-                                                <option value="2">贷款</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group col-lg-12 mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">备注</span>
-                                            </div>
-                                            <textarea id="intro" name="intro" class="form-control" aria-label="With textarea"></textarea>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addSuccessModal" onclick="check()">确认添加</button>
-                                        </div>
-                                    </form>
+                                <div class="input-group col-md-4 mb-3 float-left">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">店铺名称</span>
+                                    </div>
+                                    <input type="text" class="form-control"  placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--添加成功-->
-                    <div class="modal fade" id="addSuccessModal" tabindex="-1" aria-labelledby="addSuccessModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="addSuccessModalLabel">添加成功</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                <div class=" input-group col-md-4 mb-3 float-left">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon2">店铺地址</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="modal-body">
-                                    新店添加成功！
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>                        </div>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="input-group col-md-4 mb-3 float-left">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text">联系方式</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="kind" name="colcount">
 
-
-                    <!--            删除警示-->
-                    <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="delModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="delModalLabel">确认删除</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
-                                <div class="modal-body">
-                                    请谨慎操作！！！确认删除该店铺？
+<!--                                <div class="input-group form-group col-lg-4 float-left">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                        <label class="input-group-text">店铺地址</label>-->
+<!--                                    </div>-->
+<!--                                    <input type="text" class="form-control" id="ticketprice" name="ticketprice">-->
+<!--                                </div>-->
+
+<!--                                <div class="input-group form-group col-lg-5 mb-3">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                        <label class="input-group-text">加盟方式</label>-->
+<!--                                    </div>-->
+<!--                                    <select class="custom-select" id="inputGroupSelect01">-->
+<!--                                        <option selected>请选择</option>-->
+<!--                                        <option value="1">全款</option>-->
+<!--                                        <option value="2">贷款</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+                                <div class="input-group col-lg-12 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">备注</span>
+                                    </div>
+                                    <textarea id="intro" name="intro" class="form-control" aria-label="With textarea"></textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-danger"  data-dismiss="modal" id="delConfirm">确认删除</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addSuccessModal" onclick="check()">确认添加</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--添加成功-->
+            <div class="modal fade" id="addSuccessModal" tabindex="-1" aria-labelledby="addSuccessModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addSuccessModalLabel">添加成功</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            新店添加成功！
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--            删除警示-->
+            <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="delModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="delModalLabel">确认删除</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            请谨慎操作！！！确认删除该店铺？
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-danger"  data-dismiss="modal" id="delConfirm">确认删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!--            列表-->
+            <div class="my-4 col-12">
+                <div id="sales" class="card mb-4  main_card animated bounceInUp">
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="numbers">
+                                    <span class="title mb-0 text-capitalize font-weight-bold">店家管理</span>
+
+                                    <div class="btn-toolbar mb-2 mb-md-0 float-right">
+                                        <div class="input-group mr-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">搜索成员</span>
+                                            </div>
+                                            <input type="text" id="playname_search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onkeypress="search()">
+                                        </div>
+                                        <div class="btn-group mr-2">
+                                            <button id="add" type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#exampleModal">新店加盟</button>   <!--模态框-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                                <hr class="col-11">-->
+                                <div class="shop_list sales_flower my-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr class="list_nav">
+                                            <th>店铺编号</th>
+                                            <th>店铺名称</th>
+                                            <th>店铺地址</th>
+                                            <th>联系方式</th>
+                                            <th>备注</th>
+                                            <th>操作</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody id="table">
+                                        <tr>
+                                            <td>01</td>
+                                            <td>范佳伟</td>
+                                            <td>西安邮电大学</td>
+                                            <td>15830599166</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>刘宇阳</td>
+                                            <td>西安邮电大学</td>
+                                            <td>17792379816</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>徐卓龙</td>
+                                            <td>西安邮电大学</td>
+                                            <td>17764753450</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>徐卓龙</td>
+                                            <td>西安邮电大学</td>
+                                            <td>17764753450</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>徐卓龙</td>
+                                            <td>西安邮电大学</td>
+                                            <td>17764753450</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>06</td>
+                                            <td>徐卓龙</td>
+                                            <td>西安邮电大学</td>
+                                            <td>17764753450</td>
+                                            <td>备注</td>
+                                            <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
+                                                       onclick="del('+json[i].id+')" /></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--            列表-->
-                    <div class="table-responsive  animated bounceInUp">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr class="list_nav">
-                                <th>店铺编号</th>
-                                <th>经理姓名</th>
-                                <th>联系方式</th>
-                                <th>店铺地址</th>
-                                <th>加盟方式</th>
-                                <th>加盟时间</th>
-                                <th>备注</th>
-
-                            </tr>
-                            </thead>
-                            <tbody id="table">
-                            <tr>
-                                <td>01</td>
-                                <td>范佳伟</td>
-                                <td>15830599166</td>
-                                <td>西安邮电大学</td>
-                                <td>贷款</td>
-                                <td>2021-9-23</td>
-                                <td>备注</td>
-                                <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
-                                           onclick="del('+json[i].id+')" /></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>刘宇阳</td>
-                                <td>17792379816</td>
-                                <td>西安邮电大学</td>
-                                <td>全款</td>
-                                <td>2021-9-23</td>
-                                <td>备注</td>
-                                <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
-                                           onclick="del('+json[i].id+')" /></td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>徐卓龙</td>
-                                <td>17764753450</td>
-                                <td>西安邮电大学</td>
-                                <td>全款</td>
-                                <td>2021-9-23</td>
-                                <td>备注</td>
-                                <td><input type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delModal" value="删除"
-                                           onclick="del('+json[i].id+')" /></td>
-                            </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </main>
+                </div>
+            </div>
             </div>
         </div>
     </div>
