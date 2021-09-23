@@ -8,8 +8,25 @@ a,a:hover{
 ul,ol{
     list-style-type: none;
 }
-nav{
+nav{}
+
+
+.sale_hover{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    z-index: 1;
+    border: 1px #000 solid;
+    /*display: ;*/
 }
+.sale_hover a{
+    display: inline-block;
+    font-size: 18px !important;
+    width: 100%;
+    height: 30px !important;
+}
+
+
 /* 别看啦
 要我陪你吗
 mua~
@@ -121,5 +138,60 @@ mua~
     color: black;
     transition: .2s;
     line-height: 40px;
+
+}
+.container{
+    width: 100%;
+    height: 1000px;
+    /* background-color: rgb(218, 31, 31); */
+    /*border: black 2px solid;*/
+    margin-top: 20px;
+}
+
+.con-main{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(8, 98, 150);
+}
+.con_main_title ul li{
+    float: left;
+    max-width: 100px;
+    height: 40px;
+    background-color: rgb(156, 214, 248);
+}
+.con_main_title ul li:hover{
+    background:rgb(8, 98, 150);;
+
+}
+
+.con_main_title ul li a{
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height:40px;
+    color: black;
+    transition: .3s;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.con_main_title ul li:hover a{
+    color: #fff;
+}
+
+.nav_main_title ul li .title_active{
+    background: rgb(29, 93, 189);
+    color: #fff;
+}
+.sale_title{
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: #d4237a 5px solid;
+}
+.sale_title_plants{
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: #157f22 5px solid;
 
 }
