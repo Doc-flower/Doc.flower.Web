@@ -1,5 +1,5 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 a,a:hover{
@@ -10,6 +10,9 @@ ul,ol{
 }
 nav{
 
+}
+body{
+    margin: 0 !important;
 }
 /* 别看啦
 要我陪你吗
@@ -138,8 +141,6 @@ mua~
     align-items: center;
     width: 100%;
     min-height: 91vh;
-    margin-top: -30px;
-    border: 1px #000 solid;
     background-size: cover;
     background-position: center;
     padding: 0 6%;
@@ -172,4 +173,146 @@ mua~
 .home img{
     width: 550px;
     height: 550px;
+}
+
+/*公司简介*/
+
+.inter_every_intro{
+    border-bottom: 7px solid #d4237a;
+}
+
+.contact_us{
+    border-bottom: 7px solid #1b1e21;
+
+}
+
+
+.func_card{
+    float: right;
+    border-radius: 8px;
+    transition: .3s;
+
+}
+
+.func_card img{
+    width: 200px;
+    height: 200px;
+}
+
+.func_card:hover{
+    box-shadow:
+            0 2.3px 2.2px rgba(0, 0, 0, 0.006),
+            0 6.9px 5.3px rgba(0, 0, 0, 0.016),
+            0 12.5px 10px rgba(0, 0, 0, 0.026),
+            0 18.1px 17.9px rgba(0, 0, 0, 0.035),
+            0 23.3px 33.4px rgba(0, 0, 0, 0.042),
+            0 26px 80px rgba(0, 0, 0, 0.04);
+    transform: translate3d(0,-20px,135px);
+}
+
+.why_choose{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #d4237a;
+}
+
+
+.flower_admire img{
+    border-radius: 10px;
+
+}
+
+
+.flower_recommend{
+    height: 275px;
+    width: 380px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flower_recommend img{
+    position: absolute;
+    /*width: 100%;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.flower_reco{
+    transition: .3s;
+}
+
+.flower_reco:hover{
+    box-shadow:
+            0 2.3px 2.2px rgba(0, 0, 0, 0.006),
+            0 6.9px 5.3px rgba(0, 0, 0, 0.016),
+            0 12.5px 10px rgba(0, 0, 0, 0.026),
+            0 18.1px 17.9px rgba(0, 0, 0, 0.035),
+            0 23.3px 33.4px rgba(0, 0, 0, 0.042),
+            0 26px 80px rgba(0, 0, 0, 0.04);
+    transform: translate3d(0,-5px,135px);
+    background: #efefef;
+
+}
+
+
+.send_message{
+    font-size: 22px;
+    font-weight: bolder;
+    color:#1b1e21;
+    border-bottom: 5px #007bff solid;
+}
+
+.join_us{
+    font-size: 22px;
+    font-weight: bolder;
+    color:#1b1e21;
+    border-bottom: 5px #dc3545 solid;
+}
+
+.contact .row1{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /*gap:1.5rem;*/
+    align-items: center;
+}
+
+.contact .row1 .form{
+    flex:1 1 40rem;
+    padding:2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+
+.contact .row1 .image{
+    flex:1 1 40rem;
+}
+
+.contact .row1 .image img{
+    width: 100%;
+}
+
+.contact .row1 .form .box{
+    padding:.55rem;
+    font-size: 1.05rem;
+    color:#333;
+    text-transform: none;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin:.5rem 0;
+    width: 100%;
+}
+
+.contact .row1 .form .box:focus{
+    border-color: var(--pink);
+}
+
+.contact .row1 .form textarea{
+    height: 15rem;
+    resize: none;
 }
