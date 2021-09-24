@@ -9,6 +9,7 @@ ul,ol{
     list-style-type: none;
 }
 nav{
+
 }
 /* 别看啦
 要我陪你吗
@@ -16,7 +17,7 @@ mua~
 */
 .nav_main{
     margin: 0 auto;
-    height: 70px;
+    height: 60px;
     box-shadow: black 0 -2px 4px;
     padding:0 15%;
 }
@@ -70,15 +71,15 @@ mua~
     color: #fff;
 }
 .nav_main_title ul li a{
-    font-size: 24px;
+    font-size: 21px;
     display: inline-block;
     text-align: center;
     width: 130px;
-    height:70px;
+    height:60px;
     color: black;
     font-weight: bold;
     transition: .2s;
-    line-height: 70px;
+    line-height: 60px;
 }
 /* 宝宝不会打字了 我爱你
 我也爱你
@@ -108,8 +109,8 @@ mua~
     有去掉的
 */
 .nav_main_user img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: auto 0;
 }
 
@@ -129,3 +130,46 @@ mua~
 }
 
 /* 快想文案 */
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 91vh;
+    margin-top: -30px;
+    border: 1px #000 solid;
+    background-size: cover;
+    background-position: center;
+    padding: 0 6%;
+    background: #fff1f2;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color:#333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color:var(--pink) !important;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home img{
+    width: 550px;
+    height: 550px;
+}
