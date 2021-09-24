@@ -11,6 +11,9 @@ body{
     position: relative;
     min-height: 100vh;
     width: 100%;
+    background: #E4E9F7;
+
+
 }
 ::selection{
     color: #fff;
@@ -230,10 +233,11 @@ body{
     background: none
 }
 .home_content{
-    position: absolute;
+    /*position: absolute;*/
     height: 100%;
     width: calc(100% - 78px);
-    left: 78px;
+    /*left: 78px;*/
+    float: right;
     background: #E4E9F7;
     box-shadows: 0 5px 10px rgba(0,0,0,0.2);
     transition: all 0.5s ease;
@@ -263,6 +267,93 @@ body{
 }
 .card-icon{
     border-radius: 10px;
-
     height: 85px;
+}
+.main_icon_img{
+    margin: 30px auto;
+}
+
+/*销量部分*/
+#sales{
+    height: 445px;
+
+}
+
+.sales{
+    font-size: 13px;
+}
+.sales thead,tr,th{
+    height: 10px;
+}
+
+/*评论部分*/
+#comment{
+    height: 445px;
+}
+
+.comment{
+    /*border: #00f 1px solid;*/
+    margin: 0.5rem auto;
+    border-radius: 8px;
+    background: #dff1fd;
+}
+
+.comment_name{
+    /*border: #000 1px solid;*/
+}
+
+.user_name{
+    color: #555;
+    font-size: 22px;
+}
+
+.comment_time{
+    color: #777;
+    font-size: 12px;
+}
+
+.comment_content{
+    /*border: #000 1px solid;*/
+
+}
+
+.comment_content p{
+    color: #353a3e;
+    font-size: 14px;
+
+}
+
+/*精彩文章*/
+#Blogs{
+    height: 525px;
+}
+
+.blogs_title{
+    font-size: 22px;
+    color: #1b1e21;
+    font-weight: bolder;
+}
+
+.blogs_content p{
+    color: #717679;
+    font-size: 13px;
+}
+.blogs_img img{
+    margin: 0 5px 0 0 !important;
+    padding: 0 !important;
+    border-radius:5px
+;
+}
+
+/*页脚部分*/
+footer{
+    height: 70px;
+    width: calc(100% - 78px);
+    background: #dcdee0;
+    float: right;
+
+}
+
+.flower_data{
+    height: 250px;
 }
