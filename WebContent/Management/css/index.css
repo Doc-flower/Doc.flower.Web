@@ -306,7 +306,8 @@ body{
 
 .user_name{
     color: #555;
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 .comment_time{

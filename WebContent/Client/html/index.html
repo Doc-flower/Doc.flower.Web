@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <link rel="stylesheet" href="../../public/css/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -44,7 +46,6 @@
             <h3>花博士</h3>
             <span> 花店不开了，花继续开</span>
             <p>这样的时刻，我就只想在春天必经的路口，开一间花店。店不大，朴素，宛如乡庐；小巧，宛如画屏；精致，宛如庭院</p>
-            <a href="#" class="btn">shop now</a>
         </div>
         <img src="../img/contact-img.svg"  alt="">
     </section>
@@ -121,10 +122,10 @@
             <div class="col-12 mt-3 mb-4 text-center">
                 <h1 class="col-3 mx-auto pt-5 pb-2 inter_every_intro  font-weight-bolder">花卉欣赏</h1>
             </div>
-            <img src="../img/wallhaven-0pq899_1920x1080.png" class="col-md-6 mb-3 rounded"  alt="">
-            <img src="../img/wallhaven-48mdl1_1920x1080.png" class="col-md-6  mb-3 rounded"  alt="">
-            <img src="../img/wallhaven-x1gr8z_1920x1080.png" class="col-md-6  mb-3 rounded"  alt="">
-            <img src="../img/wallhaven-p815p3_1920x1080.png" class="col-md-6  mb-3 rounded"  alt="">
+            <img src="../img/wallhaven-0pq899_1920x1080.png" class="col-md-6 mb-4  flower_admire "  alt="">
+            <img src="../img/wallhaven-48mdl1_1920x1080.png" class="col-md-6  mb-4 flower_admire"  alt="">
+            <img src="../img/wallhaven-x1gr8z_1920x1080.png" class="col-md-6  mb-4 flower_admire"  alt="">
+            <img src="../img/wallhaven-p815p3_1920x1080.png" class="col-md-6  mb-4 flower_admire"  alt="">
 
 <!--            花卉推荐-->
             <div class="col-12 mt-3 mb-4 text-center">
@@ -199,7 +200,7 @@
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="../img/花/百合类/3.六出花图集/六出花1.jpg" class="new_flower"/>
-                    <div class="card-body">
+                    <div class="card-body card-body-new">
                         <p class="card-text">六出花</p>
                         <div class="d-flex justify-content-between align-items-center">
                         <span class="text-danger">
@@ -260,10 +261,10 @@
                         <span class="text-danger">
                             ￥52.21
                         </span>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-success">收藏</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger ">立即购买</button>
-                            </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-success">收藏</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger ">立即购买</button>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -287,7 +288,6 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-
 
                     <img src="../img/绿植/人参榕/img/人参榕1.jpg" class="new_flower"/>
                     <div class="card-body">
@@ -313,10 +313,34 @@
                 <h1 class="col-3 mx-auto pt-5 pb-2 contact_us  font-weight-bolder">联系我们</h1>
             </div>
 
-            <section class="contact" id="contact">
+            <div class="contact_us_card col-md-4 mb-3 text-center shadow">
+                <i class="fa fa-phone fa-2x my-3"></i>
+                <h3>our number</h3>
+                <p>+123-456-7890</p>
+                <p>+111-222-3333</p>
+            </div>
+            <div class="contact_us_card col-md-3 mb-3 text-center float-right shadow">
+                <i class="fa fa-envelope fa-2x my-3"></i>
+                <h3>our email</h3>
+                <p>shaikhanas@gmail.com</p>
+                <p>anashaikh@gmail.com</p>
+            </div>
+            <div class="contact_us_card col-md-4 mb-3 text-center float-right shadow">
+                <i class="fa fa-map-marker fa-2x my-3"></i>
+                <h3>our email</h3>
+                <p>shaikhanas@gmail.com</p>
+                <p>anashaikh@gmail.com</p>
+            </div>
+<!--            <div class="contact_us_card col-md-4">-->
+<!--                <i class="fas fa-map-marker-alt"></i>-->
+<!--                <h3>our location</h3>-->
+<!--                <p>mumbai, india - 400104</p>-->
+<!--            </div>-->
+
+            <section class="contact mt-3" id="contact">
 
                 <div class="row1">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <div class="form clearfix">
                             <p class="send_message">
                                 发送意见
@@ -329,7 +353,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <div  class="form clearfix">
                             <p class="join_us">
                                 加入我们
