@@ -17,7 +17,7 @@
 section{
     position: relative;
     min-height: 100vh;
-    background: #557085;
+    background: #ad5d5d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ input{
 }
 
 section.active{
-    background: #3e3f39;
+    background: #266f72;
 }
 .fail{
     background: #e73e49;
@@ -106,7 +106,7 @@ section .container .user .formBx input{
 }
 section .container .user .formBx input[type="button"]{
     max-width: 100px;
-    background: #677eff;
+    background: #266f72;
     color: #fff;
     cursor: pointer;
     font-size: 15px;

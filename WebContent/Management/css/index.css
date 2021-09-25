@@ -17,7 +17,7 @@ body{
 }
 ::selection{
     color: #fff;
-    background: #1296db;
+    background: #043a58;
 }
 .sidebar{
     position: fixed;
@@ -25,7 +25,7 @@ body{
     left: 0;
     height: 100%;
     width: 78px;
-    background: #1296db;
+    background: #043a58;
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
@@ -116,7 +116,7 @@ body{
     border-radius: 12px;
     outline: none;
     border: none;
-    background: #1296db;
+    background: #043a58;
     padding-left: 50px;
     font-size: 18px;
     color: #fff;
@@ -142,7 +142,7 @@ body{
     transition: all 0.4s ease;
 }
 .sidebar ul li a:hover{
-    color: #1296db;
+    color: #043a58;
     background: #fff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 
@@ -183,7 +183,7 @@ body{
     transition: all 0.4s ease;
 }
 .sidebar.active .profile_content .profile{
-    background: #1296db;
+    background: #043a58;
 }
 .profile_content .profile .profile_details{
     display: flex;
@@ -224,7 +224,7 @@ body{
     border-radius: 12px;
     text-align: center;
     transition: all 0.4s ease;
-    background: #1296db;
+    background: #043a58;
 }
 .sidebar.active .profile #log_out{
     left: 88%;
@@ -248,7 +248,7 @@ body{
 .home_content .text{
     font-size: 25px;
     font-weight: 500;
-    color: #1296db;
+    color: #043a58;
     margin: 12px;
 }
 .sidebar.active ~ .home_content{
@@ -269,8 +269,10 @@ body{
     border-radius: 10px;
     height: 85px;
 }
-.main_icon_img{
+
+.icon i{
     margin: 30px auto;
+
 }
 
 /*销量部分*/
