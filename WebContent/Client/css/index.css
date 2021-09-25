@@ -257,6 +257,10 @@ mua~
 
 }
 
+.new_flower{
+    width: 100%;
+}
+
 
 .send_message{
     font-size: 22px;
@@ -315,4 +319,9 @@ mua~
 .contact .row1 .form textarea{
     height: 15rem;
     resize: none;
+}
+
+/*页底*/
+footer{
+
 }
