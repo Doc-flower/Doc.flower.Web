@@ -251,3 +251,6 @@ body{
 
     height: 85px;
 }
+td{
+    vertical-align: middle !important;
+}

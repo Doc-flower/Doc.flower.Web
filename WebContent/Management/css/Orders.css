@@ -246,8 +246,11 @@ body{
     height: 260px;
     border-radius: 20px;
 }
-.card-icon{
+.card-icon {
     border-radius: 10px;
 
     height: 85px;
+}
+td{
+    vertical-align: middle !important;
 }
