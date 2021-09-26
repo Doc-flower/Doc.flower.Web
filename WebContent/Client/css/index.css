@@ -105,7 +105,7 @@ mua~
     height: 100%;
     width: 18%;
     float: right;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 /* 看啥呢
     为啥会有下划线
@@ -280,10 +280,15 @@ mua~
 
 
 .contact_us_card{
-    height: 200px;
+    height: 220px;
     border-radius: 10px;
     background: #fff;
     margin: 0 auto;
+}
+
+.icon-background{
+    width: 65px;
+    background: #fdeef8;
 }
 
 
