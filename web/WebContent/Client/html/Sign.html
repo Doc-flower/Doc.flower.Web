@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>登录</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Sign.css">
+    <link rel="stylesheet" href="../../public/css/animate.min.css">
+    
+
+
+    <script type="text/javascript">
+
+        
+        function checkName(){
+            checkField("customername",/^[A-Za-z0-9_-]{6,20}$/);
+        }
+
+        //校验手机号
+        function checkTel(){
+            checkField("customertel",/^1[3,4,5,7,8]\d{9}$/);
+        }
+
+        function checkMail() {
+            checkField("customeremail",/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,6}$/);
+        }
+
+        function checkPwd(){
+            //获取用户的密码信息
+            var pwd = document.getElementById("customerpwd");
+            //创建校验规则
+            var reg = /^[A-Za-z0-9_-]{6,20}$/;
+            //开始校验
+            if(reg.test(pwd.value)){
+                //输出校验结果
+                pwd.style.background = "#abffab";
+                return true;
+            }else{
+                //输出校验结果
+                pwd.style.background = "#ffb0b0";
+                return false;
+            }
+        }
+
+        //校验确认密码
+        function checkcfmpwd(){
+            //获取密码
+            var pwd1 = document.getElementById("customerpwd");
+            //获取确认密码
+            var pwd2 = document.getElementById("customercfmpwd");
+
+            //比较
+            if(pwd1.value==pwd2.value && checkPwd()){
+                pwd2.style.background = "#abffab";
+                return true;
+            }else {
+                pwd2.style.background = "#ffb0b0";
+                return false;
+            }
+        }
+
+        //封装校验：相同的保留，不同的传参。
+        function checkField(id,reg){
+            //获取用户数据
+            var inp = document.getElementById(id);
+            var va=inp.value;
+            //获取span对象
+            //开始校验
+            if(reg.test(va)){
+                //输出校验规则
+                inp.style.background = "#abffab";
+                return true;
+            }else{
+                //输出校验规则
+                inp.style.background = "#ffb0b0";
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <section>
+        <br>
+        <div class="container animated bounceInDown left" >
+            <div class="user signinBx">
+                <div class="imgBx">
+                    <img src="../img/70F4D949DE7AA6AB8D43EB947C0C9DF2.jpg" height="1080" width="1920"/></div>
+
+                <div class="formBx">
+                    <form>
+                        <img src="../../public/img/logo.png" alt="" width="110" height="110">
+
+                        <h1>登  录</h1>
+                        <input type="text" id="email" name="email" placeholder="邮箱地址" autofocus>
+                        <input type="password" id="password" name="password" placeholder="密码">
+                        <input type="button" id="bt1" value="登 录" onclick="search()">
+                        <p class="signup">还没有账户？ <a href="#" onclick="toggleForm();">去注册</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form id="form_signUp">
+                        <h1>创建账户</h1>
+                        <input type="hidden" id="type" name="type" value="add">
+
+                        <input type="text" id="customername" name="customername" placeholder="用户名，6-20位" onblur="checkName()">
+                        <input type="text" id="customertel" name="customertel" placeholder="电话号码" onblur="checkTel()">
+                        <input type="text" id="customeremail" name="customeremail" placeholder="邮箱地址" onblur="checkMail()">
+                        <input type="password" id="customerpwd" name="customerpwd" placeholder="密码，6-20位" onblur="checkPwd()">
+                        <input type="password" id="customercfmpwd" name="customercfmpwd" placeholder="确认密码" onblur="checkcfmpwd()">
+                        <input type="button" value="注 册" onclick="check()">
+                        <p class="signup">已经有账户了？ <a href="#" onclick="toggleForm();">登录</a></p>
+                    </form>
+                </div>
+                <div class="imgBx">
+                    <img src="../img/A80D754971E644F8CA6FBE0C824E2E1A.jpg" height="1080" width="1920"/></div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleForm(){
+            section = document.querySelector('section');
+            container = document.querySelector('.container');
+            container.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
